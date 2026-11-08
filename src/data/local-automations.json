@@ -1,0 +1,148 @@
+{
+  "templates": [
+    {
+      "id": "tpl-1",
+      "title": "Cotización Rápida con Precio de Taller",
+      "category": "Cotización",
+      "channel": "whatsapp",
+      "content": "¡Hola {cliente}! 👋 Con mucho gusto le ayudo con la información de la *{equipo}*.\n\n💰 *Precio de fábrica:* {precio} (Precio directo de taller sin intermediarios).\n🛡️ *Garantía:* Fabricada íntegramente en acero inoxidable de grado alimenticio sanitario con garantía por escrito.\n📍 *Fábrica:* {ubicacion}.\n🚚 *Entrega:* Tenemos unidades listas para entrega inmediata hoy mismo y envíos seguros a todo el Ecuador.\n\n¿Le gustaría que le reservemos una unidad o prefiere visitarnos en el taller para verla en persona?",
+      "tags": [
+        "Cocinas",
+        "Precio",
+        "Primer Contacto"
+      ]
+    },
+    {
+      "id": "tpl-2",
+      "title": "Respuesta a Objeción de Precio (Calidad vs. Barato)",
+      "category": "Objeciones",
+      "channel": "whatsapp",
+      "content": "Estimado {cliente}, entendemos perfectamente que busque la mejor inversión. En el mercado existen cocinas de chapa fina o latón que parecen baratas pero en 6 meses se oxidan, se doblan con las ollas pesadas y le hacen perder gas.\n\nEn *APM Inox 1* usamos soldadura TIG reforzada y acero inoxidable real de 1mm con quemadores de hierro fundido de alto rendimiento. Le va a durar más de 10 años en uso rudo de restaurante.\n\nPor los {precio} que cuesta la {equipo}, usted se asegura un equipo para toda la vida con respaldo técnico directo de fábrica en Quito Norte. ¿Le gustaría que le enviemos un video de prueba de fuego y resistencia?",
+      "tags": [
+        "Objeción",
+        "Calidad",
+        "Cierre"
+      ]
+    },
+    {
+      "id": "tpl-3",
+      "title": "Ubicación y Horarios de Taller (Quito Norte)",
+      "category": "Ubicación",
+      "channel": "whatsapp",
+      "content": "📍 *TALLER Y SALA DE EXHIBICIÓN APM INOX 1:*\nEstamos ubicados en *Quito Norte, exactamente al frente del Club de Leones*.\n\n🕒 *Horarios de atención:*\n• Lunes a Viernes: 8:00 AM - 6:00 PM\n• Sábados: 8:30 AM - 2:00 PM\n\nPuede venir cuando guste para revisar los acabados, probar los quemadores y llevarse su equipo de inmediato en su vehículo o pedir envío a su local. ¿Le gustaría coordinar una visita para hoy?",
+      "tags": [
+        "Ubicación",
+        "Visita",
+        "Taller"
+      ]
+    },
+    {
+      "id": "tpl-4",
+      "title": "Envíos Seguros a Nivel Nacional y Pagos",
+      "category": "Logística",
+      "channel": "whatsapp",
+      "content": "🚚 *ENVÍOS Y FORMAS DE PAGO SEGURAS:*\nDespachamos pedidos a todas las provincias de Ecuador (Guayas, Manabí, Azuay, Tungurahua, El Oro, Santo Domingo, etc.) a través de transporte seguro y encomiendas respaldadas.\n\n💳 *Formas de pago:*\n1. Transferencia bancaria directa (Banco Pichincha, Guayaquil, Pacífico).\n2. Efectivo directamente en nuestro taller.\n3. Envíos con guía de rastreo y embalaje protector en burbuja y cartón corrugado.\n\n¿A qué ciudad o cantón necesitaría que le despachemos la {equipo}?",
+      "tags": [
+        "Envíos",
+        "Provincias",
+        "Pago"
+      ]
+    },
+    {
+      "id": "tpl-5",
+      "title": "Oferta Flash de Cierre de Semana",
+      "category": "Cierre",
+      "channel": "whatsapp",
+      "content": "¡Hola {cliente}! Le escribo de parte de APM Inox. Justo este fin de semana estamos cerrando lote de fabricación de taller y tenemos una *{equipo}* lista para despacho.\n\nSi confirma su pedido el día de hoy, le mantenemos el precio especial de fábrica de {precio} y le damos prioridad en la ruta de entrega.\n\n¿Desea que se la separemos con sus datos para que no se quede sin la suya?",
+      "tags": [
+        "Urgencia",
+        "Oferta",
+        "Cierre"
+      ]
+    }
+  ],
+  "dripCampaigns": [
+    {
+      "id": "drip-inox-7d",
+      "name": "Secuencia de Cierre 7 Días - Equipos Inox",
+      "description": "Secuencia probada para convertir clientes indecisos en compradores de cocinas y mobiliario industrial",
+      "active": true,
+      "steps": [
+        {
+          "day": 1,
+          "trigger": "Al recibir solicitud de precio",
+          "title": "Ficha Técnica y Cotización de Fábrica",
+          "message": "¡Hola {cliente}! Un gusto saludarle. Aquí tiene la ficha técnica de la {equipo} por {precio}. Cuenta con acero inoxidable grado alimenticio y garantía directa de fábrica. ¿Para qué tipo de comida o negocio la necesita?"
+        },
+        {
+          "day": 2,
+          "trigger": "24 horas después sin compra",
+          "title": "Pregunta de Medidas y Espacio",
+          "message": "Hola {cliente}, ¿cómo está? ¿Pudo revisar el espacio o medidas en su cocina para la {equipo}? Si necesita alguna medida o adaptación especial en altura o quemadores, se la fabricamos a medida en nuestro taller."
+        },
+        {
+          "day": 4,
+          "trigger": "72 horas después",
+          "title": "Prueba Social & Garantía en Taller",
+          "message": "Hola {cliente}. Le comparto que ayer entregamos una {equipo} a un restaurante de comida rápida en Pichincha y quedaron encantados con la potencia de los quemadores de hierro fundido. Recuerde que su compra tiene garantía por escrito y respaldo técnico en Quito Norte."
+        },
+        {
+          "day": 7,
+          "trigger": "Día final de seguimiento",
+          "title": "Urgencia Comercial y Despacho Semanal",
+          "message": "Estimado {cliente}, hoy viernes sale nuestro camión de despachos y entregas. Si aún tiene pensado equipar su local con la {equipo}, podemos coordinar su entrega hoy mismo por {precio}. ¿Le guardamos una?"
+        }
+      ]
+    }
+  ],
+  "chatbot": {
+    "enabled": true,
+    "welcomeMessage": "¡Hola! Bienvenido a *APM Inox 1*, fabricantes líderes de cocinas y equipos gastronómicos en acero inoxidable en Quito Norte. 👨‍🍳🔥\n\n¿Qué tipo de equipo está buscando para su negocio?",
+    "options": [
+      {
+        "id": "opt-1",
+        "label": "1️⃣ Cocinas Industriales",
+        "recommendedProduct": "Cocina Industrial de 2 Quemadores en Acero Inoxidable ($200) o 3 Quemadores con Plancha ($350)",
+        "reply": "Excelente opción. Fabricamos cocinas industriales con quemadores de hierro fundido de alta presión y estructura en acero inoxidable de grado 304.\n\nNuestras más vendidas son:\n• Cocina 2 quemadores: $200\n• Cocina 3 quemadores con plancha asadora: $350\n\n¿Cuál de las dos le acomoda mejor para su menú?"
+      },
+      {
+        "id": "opt-2",
+        "label": "2️⃣ Mesas de Trabajo en Acero",
+        "recommendedProduct": "Mesa de Trabajo Sanitaria con Entrepaño ($160)",
+        "reply": "Nuestras mesas de trabajo están fabricadas en acero inoxidable grado 304 sanitario con refuerzo antivibratorio y entrepaño inferior para almacenar ollas o ingredientes.\n\nPrecio de fábrica: $160 (Medida estándar 1.20m x 0.60m) o a la medida de su local.\n\n¿En qué medidas la necesita?"
+      },
+      {
+        "id": "opt-3",
+        "label": "3️⃣ Campanas Extractoras",
+        "recommendedProduct": "Campana Extractora Industrial con Filtros ($290)",
+        "reply": "Fabricamos campanas extractoras industriales con filtros laberinto atrapagrasa lavables y canal de condensado para restaurantes y asaderos por $290 o con ductería a medida.\n\n¿De cuántos metros es su línea de cocinas?"
+      },
+      {
+        "id": "opt-4",
+        "label": "4️⃣ Visitar Fábrica en Quito Norte",
+        "recommendedProduct": "Atención personalizada en taller",
+        "reply": "¡Con gusto le atendemos en persona! Estamos ubicados en Quito Norte, al frente del Club de Leones. Puede venir a ver los equipos terminados y probarlos en vivo. ¿Qué día le gustaría visitarnos?"
+      }
+    ]
+  },
+  "broadcasts": [
+    {
+      "id": "bc-1",
+      "title": "Promoción Quincena - Cocinas Industriales",
+      "targetAudience": "Prospectos con cotización pendiente",
+      "sentCount": 24,
+      "status": "COMPLETED",
+      "createdAt": "2026-09-18T14:30:00Z",
+      "delaySeconds": 12,
+      "message": "🔥 ¡Promoción especial de fábrica en APM Inox! Esta semana llévese su cocina industrial con entrega inmediata y garantía por escrito."
+    }
+  ],
+  "assignedDrips": {
+    "lead-26216267311403978": {
+      "dripId": "drip-inox-7d",
+      "currentStep": 1,
+      "enrolledAt": "2026-10-01T20:00:36.281Z",
+      "status": "active"
+    }
+  }
+}

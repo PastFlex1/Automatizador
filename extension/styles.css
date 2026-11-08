@@ -1,0 +1,657 @@
+/* MetaCloser CRM - WhatsApp Web Extension Styles (Modern Light Theme) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =======================================================
+   THEME VARIABLES (Light & Plomos Claros / Soft Dark)
+   Se adaptan automáticamente al tema de WhatsApp Web
+   ======================================================= */
+
+/* LIGHT THEME (Por defecto y cuando WhatsApp está en claro) */
+:root, [data-theme="light"], .light {
+  /* CRM Panel Variables */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary: #f59e0b;
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  
+  --bg-hover: #f1f5f9;
+  --bg-snippet-hover: #eff6ff;
+  --bg-active-stage: #eff6ff;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  /* WhatsApp Web Light Mode Tweaks (Opcional, más limpio) */
+  --app-background: #f8fafc !important;
+  --panel-background: #ffffff !important;
+}
+
+/* SOFT DARK THEME / PLOMOS CLAROS (Cuando WhatsApp está en Oscuro) */
+[data-theme="dark"], .dark {
+  /* CRM Panel Variables (Plomos Claros) */
+  --primary: #6366f1; /* Índigo más brillante para fondo oscuro */
+  --primary-hover: #4f46e5;
+  --secondary: #f59e0b;
+  --bg-base: #0f172a; /* Plomo oscuro de fondo base */
+  --bg-surface: #1e293b; /* Plomo medio para tarjetas */
+  --bg-surface-glass: rgba(30, 41, 59, 0.85);
+  --text-main: #f8fafc; /* Texto casi blanco */
+  --text-muted: #94a3b8; /* Texto gris claro */
+  --border-color: #334155; /* Borde plomo */
+
+  --bg-hover: #334155;
+  --bg-snippet-hover: #1e293b;
+  --bg-active-stage: #1e293b;
+
+  /* Sombra para modo oscuro (más fuerte pero menos dispersa) */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+  /* WhatsApp Web Overrides: Forzamos sus variables nativas 
+     para que usen Plomos Claros en vez de verde/negro pantano */
+  --app-background-default: #0f172a !important;
+  --app-background: #0f172a !important;
+  --panel-background-lighter: #1e293b !important;
+  --panel-background-colored: #1e293b !important;
+  --panel-background-deep: #0b1120 !important;
+  --panel-background: #1e293b !important;
+  --chatpanel-background: #0f172a !important;
+  
+  --header-background: rgba(30, 41, 59, 0.9) !important;
+  --header-search-background: #0f172a !important;
+  --search-input-background: #0f172a !important;
+  
+  --incoming-background: #1e293b !important;
+  --incoming-text: #f8fafc !important;
+  --outgoing-background: #334155 !important;
+  --outgoing-text: #f8fafc !important;
+
+  --border-default: #334155 !important;
+  --border-panel: #334155 !important;
+}
+
+#apm-crm-toggle-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#apm-crm-toggle-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.6);
+}
+
+#apm-crm-toggle-btn .badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+/* Sidebar Drawer */
+#apm-crm-sidebar {
+  position: fixed;
+  top: 12px;
+  right: -420px;
+  width: 400px;
+  height: calc(100vh - 24px);
+  z-index: 99999;
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: var(--shadow-glass);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#apm-crm-sidebar.open {
+  right: 12px;
+}
+
+/* Sidebar Header */
+.apm-header {
+  padding: 20px 24px;
+  background: var(--bg-surface-glass);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apm-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.apm-logo-badge {
+  background: linear-gradient(135deg, var(--secondary), #d97706);
+  color: #fff;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.apm-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.apm-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+.apm-close-btn {
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.apm-close-btn:hover {
+  background: var(--border-color);
+  color: var(--text-main);
+  transform: rotate(90deg);
+}
+
+/* Scrollable Content */
+.apm-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apm-content::-webkit-scrollbar {
+  width: 6px;
+}
+.apm-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Section Box */
+.apm-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+
+.apm-section:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.apm-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Active Contact Card */
+.apm-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  background: var(--bg-base);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.apm-contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.apm-contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.apm-contact-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.apm-contact-phone {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 500;
+  margin: 4px 0 0 0;
+}
+
+/* Pipeline Status Badges */
+.apm-pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.apm-stage-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  text-align: center;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.apm-stage-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.apm-stage-btn.active {
+  border-width: 2px;
+}
+
+.stage-new.active { color: #3b82f6; background: var(--bg-active-stage); border-color: #3b82f6; }
+.stage-quote.active { color: #f59e0b; background: var(--bg-active-stage); border-color: #f59e0b; }
+.stage-closing.active { color: #8b5cf6; background: var(--bg-active-stage); border-color: #8b5cf6; }
+.stage-won.active { color: #10b981; background: var(--bg-active-stage); border-color: #10b981; }
+
+/* Save to CRM button */
+.apm-btn-primary {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.apm-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* Product Catalog Cards */
+.apm-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apm-product-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.apm-product-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.apm-product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.apm-product-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.apm-product-price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #059669;
+  background: #d1fae5;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.apm-product-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.apm-btn-insert {
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.apm-btn-insert:hover {
+  background: var(--primary-hover);
+  color: #ffffff;
+  border-color: var(--primary-hover);
+}
+
+/* Quick Snippets */
+.apm-snippets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apm-snippet-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.apm-snippet-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--bg-snippet-hover);
+  transform: translateX(4px);
+}
+
+/* Toast alert */
+.apm-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  z-index: 100000;
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apm-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Rendered Templates from JS override styling */
+.apm-template-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+.apm-template-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.apm-template-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.apm-template-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.apm-template-category {
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--bg-snippet-hover);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.apm-btn-tpl-insert {
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.apm-btn-tpl-insert:hover {
+  background: var(--primary-hover);
+  color: #ffffff;
+  border-color: var(--primary-hover);
+}
+
+/* =======================================================
+   Auto-Pilot Bot UI Components
+   ======================================================= */
+
+/* Toggle Switch */
+.apm-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.apm-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.apm-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: .3s;
+  border-radius: 20px;
+}
+
+.apm-slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+input:checked + .apm-slider {
+  background-color: #10b981; /* Verde éxito para activado */
+}
+
+input:focus + .apm-slider {
+  box-shadow: 0 0 1px #10b981;
+}
+
+input:checked + .apm-slider:before {
+  transform: translateX(16px);
+}
+
+/* Textarea Bot */
+.apm-textarea {
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  resize: vertical;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.apm-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Bot Rules Config */
+.apm-bot-rule-box {
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.apm-input {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 6px;
+  padding: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.apm-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+

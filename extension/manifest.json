@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "MetaCloser CRM - WhatsApp Web Copilot",
+  "version": "1.1.0",
+  "description": "CRM integrado directamente en WhatsApp Web para gestión de clientes, catálogo de equipos y respuestas rápidas para APM Inox.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "https://www.facebook.com/*",
+    "https://www.messenger.com/*",
+    "https://business.facebook.com/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "MetaCloser CRM Omnicanal"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://www.messenger.com/*",
+        "https://business.facebook.com/*"
+      ],
+      "js": ["facebook-content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css", "popup.html"],
+      "matches": ["https://web.whatsapp.com/*", "https://www.facebook.com/*"]
+    }
+  ]
+}
+

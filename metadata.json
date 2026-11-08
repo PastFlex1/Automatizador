@@ -1,0 +1,6 @@
+{
+  "name": "MetaCloser CRM",
+  "description": "CRM comercial personalizado para asesoramiento inteligente y cierre de ventas en WhatsApp, Instagram Direct y Messenger.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

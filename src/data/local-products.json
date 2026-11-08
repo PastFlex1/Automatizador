@@ -1,0 +1,405 @@
+[
+  {
+    "id": "prod_cocina_2q",
+    "name": "Cocina Industrial 2 Quemadores Inox",
+    "category": "Cocción",
+    "price": 200,
+    "currency": "USD",
+    "tagline": "Alta eficiencia para restaurantes y emprendimientos",
+    "description": "Cocina industrial reforzada en acero inoxidable con quemadores macizos de hierro fundido.",
+    "features": [
+      "Acero inoxidable de grado alimenticio",
+      "Quemadores de hierro fundido de alta potencia",
+      "Bandeja de derrames desmontable",
+      "Garantía directa de fábrica"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_cocina_3q",
+    "name": "Cocina Industrial 3 Quemadores Inox",
+    "category": "Cocción",
+    "price": 295,
+    "currency": "USD",
+    "tagline": "Máxima potencia para alto volumen de despacho",
+    "description": "Cocina de 3 quemadores industriales en acero inoxidable grado alimenticio.",
+    "features": [
+      "Tres quemadores de hierro fundido de alto rendimiento",
+      "Estructura pesada en acero inoxidable",
+      "Garantía de fábrica por 1 año"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_lavabo_1p",
+    "name": "Lavabo de 1 Pozo Inox",
+    "category": "Lavado y Sanidad",
+    "price": "Cotizar según medida",
+    "currency": "USD",
+    "tagline": "Higiene y durabilidad garantizada",
+    "description": "Lavabo sanitario industrial de 1 pozo profundo en acero inoxidable.",
+    "features": [
+      "Acero inoxidable sanitario grado alimenticio",
+      "Pozo embutido de alta capacidad",
+      "Respaldo antisalpicaduras",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_lavabo_2p",
+    "name": "Lavabo de 2 Pozos Inox",
+    "category": "Lavado y Sanidad",
+    "price": "Cotizar según medida",
+    "currency": "USD",
+    "tagline": "Doble capacidad para lavado y desinfección",
+    "description": "Lavabo industrial de 2 pozos en acero inoxidable para restaurantes y plantas de alimentos.",
+    "features": [
+      "Doble pozo de alto tráfico",
+      "Estructura reforzada en tubo de acero inox",
+      "Entrega inmediata individual o en combo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_pozos_medida",
+    "name": "Pozos a Medida Inox",
+    "category": "Lavado y Sanidad",
+    "price": "Cotizar según medida",
+    "currency": "USD",
+    "tagline": "Fabricación exacta según las dimensiones de tu local",
+    "description": "Pozos y tinas en acero inoxidable fabricados con medidas y profundidades personalizadas.",
+    "features": [
+      "Adaptación 100% a tu espacio",
+      "Soldadura sanitaria TIG pulida",
+      "Disponibles para entrega inmediata o fabricación express"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_self_service_2",
+    "name": "Self Service de 2 Pozos / Servicios",
+    "category": "Buffet y Servicio",
+    "price": "Cotizar según sistema (baño maría/frío)",
+    "currency": "USD",
+    "tagline": "Conservación térmica impecable para alimentos preparados",
+    "description": "Mueble Self Service de 2 servicios en acero inoxidable para buffets, comedores y catering.",
+    "features": [
+      "2 servicios para bandejas gastronómicas",
+      "Acero inoxidable brillante de fácil asepsia",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_self_service_3",
+    "name": "Self Service de 3 Pozos / Servicios",
+    "category": "Buffet y Servicio",
+    "price": "Cotizar según sistema",
+    "currency": "USD",
+    "tagline": "El estándar más solicitado para restaurantes",
+    "description": "Mueble Self Service de 3 servicios en acero inoxidable de alto rendimiento.",
+    "features": [
+      "3 servicios con control de temperatura",
+      "Entrepaño inferior y repisa pasaplatos",
+      "Entrega inmediata individual o en combo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_self_service_4",
+    "name": "Self Service de 4 Pozos / Servicios",
+    "category": "Buffet y Servicio",
+    "price": "Cotizar según sistema",
+    "currency": "USD",
+    "tagline": "Gran capacidad para hoteles, comedores y restaurantes",
+    "description": "Mueble Self Service de 4 servicios en acero inoxidable de grado alimenticio.",
+    "features": [
+      "4 servicios amplios para alta rotación de platos",
+      "Acabado sanitario premium",
+      "Entrega inmediata en taller"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_mesa_150",
+    "name": "Mesa de Trabajo Inox 150 cm",
+    "category": "Mobiliario y Preparación",
+    "price": 150,
+    "currency": "USD",
+    "tagline": "Mesa de trabajo lisa en acero inoxidable 1.50m - Precio web oficial",
+    "description": "Mesa de trabajo lisa en acero inoxidable de 150 cm x 60 cm con entrepaño inferior.",
+    "features": [
+      "Medida: 1.50 metros de largo",
+      "Tablero reforzado con omegas antivibración",
+      "Patas niveladoras tubulares",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_mesa_200",
+    "name": "Mesa de Trabajo Inox 200 cm",
+    "category": "Mobiliario y Preparación",
+    "price": "Cotizar según modelo",
+    "currency": "USD",
+    "tagline": "Amplitud total para líneas de preparación profesional",
+    "description": "Mesa de trabajo industrial de 2.00 metros en acero inoxidable sanitario.",
+    "features": [
+      "Medida: 2.00 metros de largo",
+      "Alta capacidad de carga y resistencia ruda",
+      "Entrega inmediata"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_mesa_recipiente",
+    "name": "Mesa con Recipiente / Lavaplatos Inox",
+    "category": "Mobiliario y Preparación",
+    "price": "Cotizar según diseño",
+    "currency": "USD",
+    "tagline": "2 en 1: área de corte y bacha de lavado integrada",
+    "description": "Mesa de trabajo en acero inoxidable con poza/recipiente incorporado para optimizar espacio.",
+    "features": [
+      "Superficie de trabajo más poza de lavado integrada",
+      "Ideal para carnicerías, cocinas y panaderías",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_estanterias",
+    "name": "Estanterías en Acero Inoxidable",
+    "category": "Almacenamiento",
+    "price": "Cotizar según número de niveles",
+    "currency": "USD",
+    "tagline": "Organización sanitaria para cámaras frías y bodegas",
+    "description": "Estanterías modulares en acero inoxidable de 4 o 5 niveles lisos o perforados.",
+    "features": [
+      "Resistentes a la humedad y cuartos fríos",
+      "Carga pesada por nivel",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_gondolas",
+    "name": "Góndolas en Acero Inoxidable",
+    "category": "Exhibición y Almacén",
+    "price": "Cotizar según diseño",
+    "currency": "USD",
+    "tagline": "Exhibición limpia y moderna para tiendas y supermercados",
+    "description": "Góndolas centrales y de pared fabricadas en acero inoxidable de larga vida útil.",
+    "features": [
+      "Excelente presentación visual",
+      "Fácil limpieza y resistencia al óxido",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_campana_extraccion",
+    "name": "Campana de Extracción Industrial",
+    "category": "Ventilación",
+    "price": "Cotizar según metros",
+    "currency": "USD",
+    "tagline": "Extracción potente de humos y vapores con filtros laberinto",
+    "description": "Campana extractora tipo mural o isla en acero inoxidable con canal de grasa.",
+    "features": [
+      "Filtros laberinto lavables atrapagrasa",
+      "Canal recolector de grasa perimetral",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_grill_hibrido",
+    "name": "Grill Híbrido 150 x 60 Inox",
+    "category": "Cocción y Asados",
+    "price": "Cotizar según configuración",
+    "currency": "USD",
+    "tagline": "Versatilidad total: carbón y gas en un solo equipo de remate",
+    "description": "Grill híbrido industrial de 150 x 60 cm en acero inoxidable pesado para restaurantes y asaderos.",
+    "features": [
+      "Medida profesional: 150 cm x 60 cm",
+      "Sistema híbrido de alto rendimiento",
+      "Parrilla en varilla o ángulo inox",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_freidora_4p",
+    "name": "Freidora 4 Pozos 8 Canastillas",
+    "category": "Freidoras Industriales",
+    "price": "Cotizar directo de fábrica",
+    "currency": "USD",
+    "tagline": "Potencia industrial masiva para comida rápida y broaster",
+    "description": "Freidora de alto volumen con 4 pozos independientes y 8 canastillas niqueladas.",
+    "features": [
+      "4 pozos individuales para freír diferentes alimentos sin mezclar sabores",
+      "8 canastillas de alta resistencia",
+      "Quemadores de tiro rápido para recuperación térmica inmediata",
+      "Entrega inmediata individual o en combo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_bar_inox",
+    "name": "Estación de Bar en Acero Inoxidable",
+    "category": "Bares y Coctelería",
+    "price": "Cotizar según accesorios",
+    "currency": "USD",
+    "tagline": "Mobiliario y coctelera profesional para bartenders",
+    "description": "Mueble estación de bar con hielera aislada, riel de botellas (speed rail) y licuadora.",
+    "features": [
+      "Hielera térmica con desagüe",
+      "Riel rápido para botellas de licores",
+      "Pozo de lavado y bacha auxiliar",
+      "Entrega inmediata individual o en grupo"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_asador_tapa",
+    "name": "Asador en Acero Inox con Tapa",
+    "category": "Asados",
+    "price": 150,
+    "currency": "USD",
+    "tagline": "Asados perfectos sin humareda excesiva",
+    "description": "Asador de carbón en acero inoxidable con tapa abatible y ruedas para fácil traslado.",
+    "features": [
+      "Tapa abatible para conservar calor y ahumado",
+      "Parrilla de asado desmontable",
+      "Entrega inmediata en taller"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "websiteUrl": "https://amecocinas.com/"
+  },
+  {
+    "id": "prod_estufa_4q_horno",
+    "name": "Estufa Industrial 4 Quemadores con Horno",
+    "category": "Cocción",
+    "price": 750,
+    "currency": "USD",
+    "tagline": "Alta potencia gastronómica con horno integrado de alta retención térmica",
+    "description": "Estufa industrial completa con 4 quemadores macizos de hierro fundido y horno en acero inoxidable.",
+    "features": [
+      "Fabricación 100% acero inoxidable T-304 grado alimenticio",
+      "4 quemadores de hierro fundido de alto rendimiento",
+      "Horno industrial con termostato y capacidad para charolas estándar",
+      "Bandeja recolectora de derrames desmontable",
+      "Catálogo oficial web https://amecocinas.com/"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "websiteUrl": "https://amecocinas.com/",
+    "imageUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "prod_freidora_2canastas",
+    "name": "Freidora de Alto Rendimiento 2 Canastas",
+    "category": "Freidoras Industriales",
+    "price": 450,
+    "currency": "USD",
+    "tagline": "20 Litros a gas para fritura rápida y crujiente",
+    "description": "Freidora industrial de 20 litros con 2 canastas niqueladas de alta durabilidad y tiro rápido.",
+    "features": [
+      "Tina en acero inoxidable T-304 de fácil drenaje",
+      "2 canastillas niqueladas con mango atérmico",
+      "Capacidad de 20 litros con alta recuperación térmica",
+      "Catálogo oficial web https://amecocinas.com/"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "websiteUrl": "https://amecocinas.com/",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "prod_campana_pared_2m",
+    "name": "Campana Extractora de Pared 2m",
+    "category": "Ventilación",
+    "price": 600,
+    "currency": "USD",
+    "tagline": "2.00 metros con filtros laberinto atrapagrasa lavables",
+    "description": "Campana extractora de pared en acero inoxidable de 2 metros con canal recolector de grasa.",
+    "features": [
+      "Filtros laberinto desmontables y lavables en acero inox",
+      "Canal perimetral recolector de condensados y grasas",
+      "Medida estándar: 2.00 metros lineales",
+      "Catálogo oficial web https://amecocinas.com/"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "websiteUrl": "https://amecocinas.com/",
+    "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "prod_horno_conveccion_4ch",
+    "name": "Horno de Convección Eléctrico Profesional",
+    "category": "Hornos Industriales",
+    "price": 1200,
+    "currency": "USD",
+    "tagline": "Cocción uniforme y homogénea con capacidad para 4 charolas",
+    "description": "Horno de convección profesional con ventilación forzada y control digital de temperatura.",
+    "features": [
+      "Capacidad para 4 charolas gastronómicas",
+      "Circulación de aire caliente envolvente para horneado parejo",
+      "Puerta con doble vidrio templado para aislamiento térmico",
+      "Catálogo oficial web https://amecocinas.com/"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "websiteUrl": "https://amecocinas.com/",
+    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "prod_plancha_gas_coldrolled_1m",
+    "name": "Plancha a Gas Acero Cold Rolled 1m",
+    "category": "Cocción y Planchas",
+    "price": 390,
+    "currency": "USD",
+    "tagline": "Placa pesada cold rolled de 1 metro para hamburguesas y carnes",
+    "description": "Plancha industrial de 1 metro con placa de cold rolled de alta retención térmica y quemadores tubulares.",
+    "features": [
+      "Plancha gruesa rectificada para calor uniforme",
+      "Canal frontal y cajón recolector de residuos grasos",
+      "Estructura en acero inoxidable de uso continuo",
+      "Catálogo oficial web https://amecocinas.com/"
+    ],
+    "stockStatus": "entrega_inmediata",
+    "websiteUrl": "https://amecocinas.com/",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+  }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Web CRM (Local Dev)</title>
+  <!-- Cargamos los estilos de la extensión directamente -->
+  <link rel="stylesheet" href="/extension/styles.css">
+  
+  <style>
+    /* Estilos base para simular la interfaz de WhatsApp Web */
+    body, html { margin: 0; padding: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #efeae2; overflow: hidden; }
+    .wa-mock-app { display: flex; height: 100vh; width: 100vw; }
+    .wa-mock-sidebar { width: 30%; background: #fff; border-right: 1px solid #d1d7db; }
+    .wa-mock-main { width: 70%; display: flex; flex-direction: column; position: relative; }
+    
+    /* Header del chat de WhatsApp */
+    #main header { background: #f0f2f5; height: 59px; display: flex; align-items: center; padding: 10px 16px; border-bottom: 1px solid #d1d7db; box-sizing: border-box; }
+    #main header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; }
+    #main header span[dir="auto"] { font-size: 16px; color: #111b21; font-weight: 500; }
+    
+    /* Cuerpo del chat */
+    .wa-mock-chat { flex: 1; background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); background-size: cover; padding: 20px; }
+    
+    /* Footer / Input de mensaje */
+    #main footer { background: #f0f2f5; padding: 10px 16px; min-height: 62px; box-sizing: border-box; display: flex; align-items: flex-end; }
+    #main footer div[contenteditable="true"] { background: #fff; border-radius: 8px; flex: 1; padding: 9px 12px; font-size: 15px; outline: none; min-height: 20px; max-height: 100px; overflow-y: auto; border: 1px solid #fff; }
+  </style>
+</head>
+<body>
+
+  <div class="wa-mock-app">
+    <!-- Lista de chats falsa con badges de no leídos -->
+    <div class="wa-mock-sidebar" id="pane-side">
+      <div style="padding: 14px 16px; border-bottom: 1px solid #e9edef; background: #fff;">
+        <input type="text" placeholder="Buscar o iniciar un chat" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #e9edef; background: #f0f2f5; font-size: 13px; box-sizing: border-box;">
+      </div>
+      <div role="listitem" style="padding: 12px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #f0f2f5; cursor: pointer; background: #f0f2f5;">
+        <img src="https://i.pravatar.cc/150?img=11" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+        <div style="flex: 1; min-width: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <strong style="font-size: 14px; color: #111b21;">Alex Palma</strong>
+            <span style="font-size: 11px; color: #667781;">12:05</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px;">
+            <span style="font-size: 12px; color: #667781; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">¿Sigue disponible la cocina industrial...?</span>
+            <span aria-label="1 mensaje no leído" style="background: #25d366; color: #fff; font-size: 10px; font-weight: bold; border-radius: 12px; padding: 2px 6px;">1</span>
+          </div>
+        </div>
+      </div>
+      <div role="listitem" style="padding: 12px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #f0f2f5; cursor: pointer;">
+        <img src="https://i.pravatar.cc/150?img=32" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+        <div style="flex: 1; min-width: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <strong style="font-size: 14px; color: #111b21;">Mariana Torres</strong>
+            <span style="font-size: 11px; color: #667781;">11:42</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px;">
+            <span style="font-size: 12px; color: #667781; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Buenas, requiero cotización de campana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chat Activo (#main es lo que busca content.js) -->
+    <div id="main" class="wa-mock-main">
+      <header>
+        <img src="https://i.pravatar.cc/150?img=11" alt="Avatar">
+        <div>
+          <span dir="auto" title="Alex Palma">Alex Palma</span>
+          <div style="font-size: 13px; color: #667781;">+593 99 123 4567</div>
+        </div>
+      </header>
+      
+      <div class="wa-mock-chat">
+        <div class="message-in" style="background:#fff;padding:10px 14px;border-radius:10px;max-width:65%;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,0.1);font-size:14px;color:#111b21;line-height:1.4;">
+          Buenas tardes, disculpe ¿sigue disponible la Cocina Industrial de 3 Quemadores y cuál es el precio con entrega en Quito?
+        </div>
+      </div>
+      
+      <footer>
+        <div contenteditable="true" data-tab="10" placeholder="Escribe un mensaje aquí" style="flex: 1; padding: 10px 14px; background: #fff; border-radius: 8px; border: 1px solid #fff; outline: none; font-size: 14px; min-height: 20px;"></div>
+        <button aria-label="Enviar" style="margin-left: 10px; width: 42px; height: 42px; border-radius: 50%; background: #00a884; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px;">
+          ➤
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Cargamos la lógica de la extensión -->
+  <script src="/extension/content.js"></script>
+  
+  <script>
+    // Pequeño script para simular inserción de texto como lo haría execCommand
+    // porque document.execCommand a veces falla en inputs simulados fuera de un contexto real
+    const input = document.querySelector('div[contenteditable="true"]');
+    input.addEventListener('input', (e) => {
+      console.log('Mensaje en WhatsApp:', input.innerText);
+    });
+  </script>
+</body>
+</html>

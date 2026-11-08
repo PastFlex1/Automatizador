@@ -1,0 +1,17 @@
+# Never ship secrets or local-only files
+.env
+.env.*
+!.env.example
+*.pem
+*.crx
+*.zip
+
+node_modules
+dist
+scratch
+extension
+.git
+.claude
+
+# Personal photo found in the uploads folder (not a product photo)
+public/equipos/1790894353606-IMG_20230902_180228_245.jpg

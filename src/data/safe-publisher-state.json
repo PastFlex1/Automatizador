@@ -1,0 +1,11 @@
+{
+  "config": {
+    "maxDailyPosts": 15,
+    "minIntervalMinutes": 15,
+    "maxIntervalMinutes": 60,
+    "requireHumanConfirmation": true,
+    "autoThrottleOnRisk": true
+  },
+  "queue": [],
+  "history": []
+}
